@@ -1,0 +1,8 @@
+{
+  "name": "vorwerk-kobold-vr200-control",
+  "version": "0.0.1",
+  "dependencies": {
+    "command-line-args": "4.0.7",
+    "node-kobold": "0.1.2"
+  }
+}
