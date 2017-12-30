@@ -2,14 +2,15 @@ const commandLineArgs = require('command-line-args')
 const kobold = require('node-kobold');
 
 const options = commandLineArgs([
-  { name: 'email', alias: 'e', type: String },
-  { name: 'password', alias: 'p', type: String },
+  { name: 'credentials', alias: 'c', type: String },
   { name: 'command', type: String, defaultOption: true }
 ]);
 
+[ email, password ] = options.credentials.split(':');
+
 const client = new kobold.Client();
 
-client.authorize(options.email, options.password, false, (error) => {
+client.authorize(email, password, false, (error) => {
   if (error) {
     console.log(error);
     return;
