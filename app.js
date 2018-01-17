@@ -1,4 +1,4 @@
-const commandLineArgs = require('command-line-args')
+const commandLineArgs = require('command-line-args');
 const kobold = require('node-kobold');
 
 const options = commandLineArgs([
